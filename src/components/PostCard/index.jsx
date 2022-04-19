@@ -4,6 +4,7 @@ export const PostCard =({ post }) => (
   <CardPost key={post.id}>
     <img src={post.cover} alt={post.title} />
     <CardContent>
+      <h5>ID: <span>{post.id}</span></h5>
       <h4>{post.title}</h4>
       <p>{post.body}</p>
     </CardContent>
@@ -28,4 +29,12 @@ const CardPost = styled.div`
 
 const CardContent = styled.div`
   padding: 10px;
+
+  h5{
+    padding: 5px 0;
+    
+    span {
+      color: red;
+    }
+  }
 `;
